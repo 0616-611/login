@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ケアアプリ画面</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #fff;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px;
+      border-bottom: 1px solid #aaa;
+    }
+    .date {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .header-icons img {
+      width: 24px;
+      height: 24px;
+      margin-left: 12px;
+    }
+    .items {
+      padding: 12px;
+    }
+    .item {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px dashed #999;
+    }
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      max-width: 480px;
+      display: flex;
+      justify-content: space-around;
+      border-top: 1px solid #aaa;
+      padding: 12px 0;
+      background: #f9f9f9;
+    }
+    .footer img {
+      width: 28px;
+      height: 28px;
+    }
+    .items {
+    padding: 12px;
+    max-height: 400px;      /* スクロール領域の高さを指定 */
+    overflow-y: auto;       /* 縦スクロール有効化 */
+}
+
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="date">2025 3/3</div>
+    <div class="header-icons">
+      <img src="notifications.png" alt="通知" />
+      <img src="Settings.png" alt="設定" />
+      <img src="account.png" alt="プロフィール" />
+    </div>
+  </div>
+
+  <div class="items" style="max-height:400px; overflow-y:auto;">
+    <div class="item"><div>動作記録</div><div>08:00</div></div>
+    <div class="item"><div>動作記録</div><div>10:15</div></div>
+    <div class="item"><div>動作記録</div><div>12:30</div></div>
+    <div class="item"><div>動作記録</div><div>08:00</div></div>
+    <div class="item"><div>動作記録</div><div>10:15</div></div>
+    <div class="item"><div>動作記録</div><div>12:30</div></div>
+    <div class="item"><div>動作記録</div><div>08:00</div></div>
+    <div class="item"><div>動作記録</div><div>10:15</div></div>
+    <div class="item"><div>動作記録</div><div>12:30</div></div>
+    <div class="item"><div>動作記録</div><div>08:00</div></div>
+    <div class="item"><div>動作記録</div><div>10:15</div></div>
+    <div class="item"><div>動作記録</div><div>12:30</div></div>
+    <div class="item"><div>動作記録</div><div>08:00</div></div>
+    <div class="item"><div>動作記録</div><div>10:15</div></div>
+    <div class="item"><div>動作記録</div><div>12:30</div></div>
+    <div class="item"><div>動作記録</div><div>08:00</div></div>
+    <div class="item"><div>動作記録</div><div>10:15</div></div>
+    <div class="item"><div>動作記録</div><div>12:30</div></div>
+    <!-- 以下、どんどん追加可能 -->
+    </div>
+
+
+  <div class="footer">
+    <img src="Home.png" alt="ホーム" />
+    <img src="List.png" alt="記録" />
+    <img src="File text.png" alt="カルテ">
+    <img src="Settings.png" alt="設定" />
+  </div>
+</body>
+</html>
