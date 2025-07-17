@@ -48,13 +48,34 @@
 
     .search {
       display: flex;
-      justify-content: space-between;
-      margin: 10px 0;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
     }
 
-    .search img {
-      width: 28px;
-      height: 28px;
+    .search input[type="text"] {
+      flex: 1;
+      padding: 8px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    /* 共通ボタンスタイル */
+    /* 共通ボタンスタイル（薄いグレー） */
+    button {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 8px 12px;
+    transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+    background-color: #ddd;
     }
 
     .calendar-header {
@@ -62,6 +83,10 @@
       justify-content: space-between;
       margin: 10px 0;
       font-weight: bold;
+    }
+
+    .calendar-header button {
+      padding: 6px 12px;
     }
 
     .calendar {
@@ -116,30 +141,28 @@
       <img src="account_circle.png" alt="プロフィール" />
     </div>
   </div>
-  
+
   <!-- カレンダー -->
   <div class="calendar-container">
+    <!-- 検索バー -->
     <div class="search">
-      <div>☰ 検索</div>
-      <img src="search.png" alt="検索" />
+      <input type="text" placeholder="予定を検索..." />
+      <button>検索</button>
     </div>
 
+    <!-- 月・年選択 -->
     <div class="calendar-header">
-      <span>&lt; 8月 &gt;</span>
-      <span>&lt; 2025 &gt;</span>
+      <button>&lt; 8月 &gt;</button>
+      <button>&lt; 2025 &gt;</button>
     </div>
 
+    <!-- カレンダー本体 -->
     <div class="calendar">
       <div>日</div><div>月</div><div>火</div><div>水</div><div>木</div><div>金</div><div>土</div>
       <div></div><div></div><div></div><div></div><div></div><div></div><div class="calendar-day">1</div>
       <div class="calendar-day">2</div><div class="calendar-day">3</div><div class="calendar-day">4</div><div class="calendar-day">5</div><div class="calendar-day">6</div><div class="calendar-day">7</div><div class="calendar-day">8</div>
       <div class="calendar-day">9</div><div class="calendar-day">10</div><div class="calendar-day">11</div><div class="calendar-day">12</div><div class="calendar-day">13</div><div class="calendar-day">14</div><div class="calendar-day">15</div>
       <div class="calendar-day">16</div><div class="calendar-day selected">17</div><div class="calendar-day">18</div><div class="calendar-day">19</div><div class="calendar-day">20</div><div class="calendar-day">21</div><div class="calendar-day">22</div>
-    </div>
-
-    <div style="margin-top: 15px; display: flex; justify-content: space-around;">
-      <button>Cancel</button>
-      <button>OK</button>
     </div>
   </div>
 
