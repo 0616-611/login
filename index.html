@@ -43,7 +43,15 @@
     .calendar-container {
       padding: 20px;
       flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
       overflow-y: auto;
+    }
+
+    .calendar-body-wrapper {
+      width: 100%;
+      max-width: 400px;
     }
 
     .search {
@@ -61,21 +69,19 @@
       border-radius: 4px;
     }
 
-    /* 共通ボタンスタイル */
-    /* 共通ボタンスタイル（薄いグレー） */
     button {
-    background-color: #ccc;
-    color: #333;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-    padding: 8px 12px;
-    transition: background-color 0.2s ease;
+      background-color: #ccc;
+      color: #333;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      padding: 8px 12px;
+      transition: background-color 0.2s ease;
     }
 
     button:hover {
-    background-color: #ddd;
+      background-color: #ddd;
     }
 
     .calendar-header {
@@ -83,6 +89,11 @@
       justify-content: space-between;
       margin: 10px 0;
       font-weight: bold;
+      align-items: center;
+    }
+
+    .calendar-header span {
+      margin: 0 10px;
     }
 
     .calendar-header button {
@@ -111,6 +122,12 @@
       color: #fff;
     }
 
+    .ok-button {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 20px;
+    }
+
     .footer {
       position: fixed;
       bottom: 0;
@@ -132,7 +149,6 @@
 </head>
 <body>
 
-  <!-- ヘッダー -->
   <div class="header">
     <div class="date">2025 3/3</div>
     <div class="header-icons">
@@ -142,31 +158,38 @@
     </div>
   </div>
 
-  <!-- カレンダー -->
   <div class="calendar-container">
-    <!-- 検索バー -->
-    <div class="search">
-      <input type="text" placeholder="予定を検索..." />
-      <button>検索</button>
-    </div>
+    <div class="calendar-body-wrapper">
 
-    <!-- 月・年選択 -->
-    <div class="calendar-header">
-      <button>&lt; 8月 &gt;</button>
-      <button>&lt; 2025 &gt;</button>
-    </div>
+      <div class="search">
+        <input type="text" placeholder="履歴を検索..." />
+        <button>検査</button>
+      </div>
 
-    <!-- カレンダー本体 -->
-    <div class="calendar">
-      <div>日</div><div>月</div><div>火</div><div>水</div><div>木</div><div>金</div><div>土</div>
-      <div></div><div></div><div></div><div></div><div></div><div></div><div class="calendar-day">1</div>
-      <div class="calendar-day">2</div><div class="calendar-day">3</div><div class="calendar-day">4</div><div class="calendar-day">5</div><div class="calendar-day">6</div><div class="calendar-day">7</div><div class="calendar-day">8</div>
-      <div class="calendar-day">9</div><div class="calendar-day">10</div><div class="calendar-day">11</div><div class="calendar-day">12</div><div class="calendar-day">13</div><div class="calendar-day">14</div><div class="calendar-day">15</div>
-      <div class="calendar-day">16</div><div class="calendar-day selected">17</div><div class="calendar-day">18</div><div class="calendar-day">19</div><div class="calendar-day">20</div><div class="calendar-day">21</div><div class="calendar-day">22</div>
+      <div class="calendar-header">
+        <button>&lt;</button>
+        <span>8月</span>
+        <button>&gt;</button>
+        <button>&lt;</button>
+        <span>2025</span>
+        <button>&gt;</button>
+      </div>
+
+      <div class="calendar">
+        <div>日</div><div>月</div><div>火</div><div>水</div><div>木</div><div>金</div><div>土</div>
+        <div></div><div></div><div></div><div></div><div></div><div></div><div class="calendar-day">1</div>
+        <div class="calendar-day">2</div><div class="calendar-day">3</div><div class="calendar-day">4</div><div class="calendar-day">5</div><div class="calendar-day">6</div><div class="calendar-day">7</div><div class="calendar-day">8</div>
+        <div class="calendar-day">9</div><div class="calendar-day">10</div><div class="calendar-day">11</div><div class="calendar-day">12</div><div class="calendar-day">13</div><div class="calendar-day">14</div><div class="calendar-day">15</div>
+        <div class="calendar-day">16</div><div class="calendar-day selected">17</div><div class="calendar-day">18</div><div class="calendar-day">19</div><div class="calendar-day">20</div><div class="calendar-day">21</div><div class="calendar-day">22</div>
+      </div>
+
+      <div class="ok-button">
+        <button>OK</button>
+      </div>
+
     </div>
   </div>
 
-  <!-- フッター -->
   <div class="footer">
     <img src="Home.png" alt="ホーム" />
     <img src="List.png" alt="記録" />
